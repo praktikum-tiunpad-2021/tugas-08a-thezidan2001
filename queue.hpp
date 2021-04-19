@@ -67,17 +67,17 @@ namespace strukdat
       }
       else
       {
-        while (newElement->priority >= pHelp->priority && pHelp->next != nullptr)
+        while (newElement->priority <= pHelp->priority && pHelp->next != nullptr)
         {
           pRev = pHelp;
           pHelp = pHelp->next;
         }
-        if (pHelp == q.head && newElement->priority < pHelp->priority)
+        if (pHelp == q.head)
         {
           newElement->next = pHelp;
           q.head = newElement;
         }
-        else if (pHelp == q.tail && newElement->priority > pHelp->priority)
+        else if (pHelp == q.tail)
         {
           pHelp->next = newElement;
           q.tail = newElement;
