@@ -111,7 +111,7 @@ namespace strukdat
     void dequeue(Queue<T> &q)
     {
       ElementPtr<T> delElement;
-      if (q.head == nullptr && q.tail == nullptr)
+      if (!q.head)
       {
         delElement = nullptr;
       }
